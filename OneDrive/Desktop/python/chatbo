@@ -1,0 +1,16 @@
+def run(query):
+    if query in ["hello", "hai", "hi", "hey", "hh"]:
+        return "Hello sir, welcome to the chatbot."
+    elif query in ["bye", "good bye", "tata", "leaving"]:
+        return "Goodbye sir."
+    else:
+        return "Wrong command."
+
+print("Welcome sir")
+ 
+while True:
+    user_input = input("Please enter your query: ")  # Use input() to get user input
+    response = run(user_input.lower())  # Convert input to lowercase for comparison
+    print(response)  # Print the response
+    if user_input.lower() in ["bye", "good bye", "tata", "leaving"]:  # Check for exit commands
+        break
